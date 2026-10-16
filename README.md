@@ -25,7 +25,7 @@ Para entrar localmente, crie um usuário no Supabase local e peça o link em `/e
 | `npm run build` / `npm start` | Build e servidor de produção |
 | `npm run lint` | ESLint |
 | `npm run typecheck` | Checagem de tipos do TypeScript |
-| `npm test` | Testes, incluindo o de isolamento entre usuários no banco (RLS) |
+| `npm test` | Testes: isolamento entre usuários no banco (RLS), limites de uso, proteção de URL, leitura, extração e conferência da análise |
 | `npm run check:landing [url]` | Confere se a landing aprovada está intacta (arquivo e, opcionalmente, o HTML servido em `url`) |
 
 ## A landing aprovada
@@ -46,6 +46,29 @@ O hash SHA-256 aprovado fica em `landing.sha256`, e o CI falha se o arquivo ou o
 - Área logada em `/app`: listar, criar, abrir, renomear e excluir projetos.
 - Banco em `supabase/migrations/`. Cada usuário só lê e altera os próprios projetos, regra garantida pelo RLS e testada em `tests/rls.test.ts`.
 - Páginas legais: `/termos`, `/privacidade`, `/contato`. Os dados da empresa ficam em `src/lib/empresa.ts`.
+
+## Análise da oferta (Fase 2)
+
+No projeto, a pessoa cola a URL da página de vendas e escolhe perfil, plataforma, país e idioma. O caminho, em `src/lib/oferta/`:
+
+1. **URL** (`url.ts`): só http/https públicos. IPs internos, nomes de rede local, portas fora de 80/443 e usuário:senha na URL são recusados.
+2. **Leitura** (`ler-pagina.ts`): no nosso servidor, até 10 s, 2 MB e 3 redirecionamentos (cada um conferido de novo). O IP é conferido na hora da conexão, o que barra DNS que aponta para dentro da rede.
+3. **Extração** (`extrair.ts`): texto com títulos, listas, botões e descrição das imagens; preços e frase de garantia. Menos de 150 palavras para aqui, sem chamar IA.
+4. **Análise** (`provedores/`): produto, público, promessa, provas, alertas e lacunas. Cada item diz se está **na página** (com o trecho) ou é **inferência** (com o motivo).
+5. **Conferência** (`evidencias.ts`): cada trecho citado é procurado no texto lido. O que não for encontrado vira inferência; prova sem trecho é descartada.
+6. **Salvamento** na tabela `analyses`, com tokens e custo quando houver IA.
+
+Modo da análise (variável `ANALISE_PROVEDOR`, só no servidor):
+
+| Modo | Quando | O que faz |
+| --- | --- | --- |
+| `desligado` | padrão em produção | Lê a página e mostra o que encontrou, sem análise. Não gasta a cota de análises. |
+| `simulado` | padrão fora da produção (dev, previews) | Resultado montado por regras simples, marcado como SIMULAÇÃO, sem custo. Nunca liga em produção. |
+| `anthropic` | só com `ANALISE_PROVEDOR=anthropic` **e** `ANTHROPIC_API_KEY` | Chama o modelo (gera custo). Hoje desligado. |
+
+Limites por plano na tabela `plan_limits` (beta: 10 análises por mês e 30 leituras por hora), contados pela função `registrar_uso`, que o usuário não consegue burlar.
+
+**Antes de usar em um ambiente novo:** rode `supabase/migrations/0002_analises.sql` no SQL Editor do Supabase.
 
 ## Deploy na Vercel
 
