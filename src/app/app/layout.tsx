@@ -9,7 +9,6 @@ export default function AppLayout({ children }: LayoutProps<"/app">) {
         <Link href="/app" className="wordmark"><i />Ariexus</Link>
         <nav aria-label="Principal">
           <Link href="/app">Projetos</Link>
-          <span title="Chega na Fase 2">Analisar produto (em breve)</span>
         </nav>
         <footer>
           <Suspense fallback={null}>
