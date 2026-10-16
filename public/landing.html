@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ariexus — Cole a URL da oferta. Receba a campanha estruturada.</title>
-<meta name="description" content="A Ariexus lê a página da sua oferta e entrega análise, palavras-chave, anúncios, criativos e estrutura para Google Ads e Meta Ads. Você revisa e decide o que publicar.">
+<meta name="description" content="A Ariexus lê a página da sua oferta e mostra o produto, o público, a promessa e as provas. Dessa análise saem palavras-chave, anúncios e a estrutura da campanha. Você revisa e decide o que publicar.">
 <meta name="theme-color" content="#ffffff">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -206,6 +206,11 @@ h1,h2,h3,p{margin:0}
 .nav .link:hover::after,.nav .link:focus-visible::after{transform:scaleX(1)}
 .btn--nav{position:absolute;left:718px;top:9px;width:153px;background:#fff;color:#000;font-weight:var(--fw-bold)}
 .btn--nav:hover{background:#eaf9fd}
+.nav__login{position:absolute;left:640px;top:0;height:52px;width:64px;display:flex;align-items:center;justify-content:center;font-size:var(--fs-ui);font-weight:var(--fw-medium);letter-spacing:var(--tr-ui);line-height:var(--lh-flat);color:var(--c-on-dark);text-decoration:none;white-space:nowrap}
+.nav__login:hover,.nav__login:focus-visible{color:var(--c-accent)}
+.soon{display:inline-block;margin-left:6px;padding:3px 8px;border-radius:99px;background:#eceef1;color:#555;font-size:10.5px;font-weight:var(--fw-bold);letter-spacing:0;line-height:1.2;text-transform:none;vertical-align:middle;white-space:nowrap}
+.bcard .soon{display:block;width:max-content;margin:8px 0 0}
+.pcol--flow .soon,.plan--pro .soon{background:rgba(255,255,255,.16);color:#e8e8e8}
 
 .burger{display:none}
 .navmenu{display:none}
@@ -333,7 +338,7 @@ h1,h2,h3,p{margin:0}
     display:flex;align-items:center;transform:none;
   }
   .nav.is-scrolled{top:10px}
-  .nav__links,.btn--nav{display:none}
+  .nav__links,.btn--nav,.nav__login{display:none}
   .logo{position:static;margin-left:9px;flex:none}
   .wordmark{position:static;height:auto;margin-left:6px}
 
@@ -573,7 +578,9 @@ h1,h2,h3,p{margin:0}
 .step__text{margin-top:14px;font-size:17px;line-height:1.55;letter-spacing:-0.02em;color:var(--c-text-2);max-width:42ch}
 .step__shot{display:none}
 @media (min-width:940px){
-  .js .step{opacity:.3;transition:opacity .5s var(--ease-out)}
+  .js .step{opacity:.55;transition:opacity .5s var(--ease-out);cursor:pointer}
+  .js .step:hover{opacity:.8}
+  .js .step:focus-visible{outline:2px solid var(--c-accent);outline-offset:6px;border-radius:12px}
   .js .step.is-active{opacity:1}
 }
 .how__stage{position:sticky;top:max(96px, calc(50vh - 312px));height:min(624px, calc(100vh - 120px))}
@@ -1149,7 +1156,8 @@ h1,h2,h3,p{margin:0}
     <a class="link l3" href="#planos">Planos</a>
     <a class="link l4" href="#faq">FAQ</a>
   </div>
-  <a class="btn btn--nav" href="#planos">Começar agora</a>
+  <a class="nav__login" href="/entrar">Entrar</a>
+  <a class="btn btn--nav" href="mailto:contato.ariexus@gmail.com?subject=Pedido%20de%20acesso%20ao%20beta%20da%20Ariexus">Pedir acesso</a>
   <button class="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
     <span class="burger__bar"></span><span class="burger__bar"></span>
   </button>
@@ -1158,7 +1166,8 @@ h1,h2,h3,p{margin:0}
     <a class="navmenu__link" href="#beneficios">Benefícios</a>
     <a class="navmenu__link" href="#planos">Planos</a>
     <a class="navmenu__link" href="#faq">FAQ</a>
-    <a class="navmenu__cta" href="#planos">Começar agora</a>
+    <a class="navmenu__link" href="/entrar">Entrar</a>
+    <a class="navmenu__cta" href="mailto:contato.ariexus@gmail.com?subject=Pedido%20de%20acesso%20ao%20beta%20da%20Ariexus">Pedir acesso</a>
   </div>
 </nav>
 
@@ -1173,16 +1182,16 @@ h1,h2,h3,p{margin:0}
       <h1 class="hero-h1 t-display">Cole a URL da oferta.
 Receba a campanha estruturada.</h1>
 
-      <p class="hero-sub t-body">A Ariexus lê a página da sua oferta e entrega análise, palavras-chave, anúncios, criativos
-e estrutura para Google Ads e Meta Ads. Você revisa e decide o que publicar.</p>
+      <p class="hero-sub t-body">A Ariexus lê a página da sua oferta e mostra o produto, o público, a promessa e as provas.
+Dessa análise saem palavras-chave, anúncios e a estrutura da campanha. Você revisa e decide o que publicar.</p>
 
       <div class="hero-cta">
         <div class="hero-cta__row">
-          <a class="btn btn--hero shine" href="#planos">Analisar minha oferta</a>
+          <a class="btn btn--hero shine" href="mailto:contato.ariexus@gmail.com?subject=Pedido%20de%20acesso%20ao%20beta%20da%20Ariexus">Pedir acesso ao beta</a>
           <a class="link-more" href="#como-funciona">Ver como funciona
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
         </div>
-        <p class="hero-micro">Pix ou cartão<span class="dotsep">•</span>Suporte por e-mail<span class="dotsep">•</span>Você revisa antes de publicar</p>
+        <p class="hero-micro">Beta fechado<span class="dotsep">•</span>Suporte por e-mail<span class="dotsep">•</span>Você revisa antes de publicar</p>
       </div>
 
       <div class="band" role="presentation">
@@ -1297,10 +1306,10 @@ e estrutura para Google Ads e Meta Ads. Você revisa e decide o que publicar.</p
           <h3>Um fluxo só, da URL ao próximo passo.</h3>
           <ol class="flow" data-stagger style="--d:.35s">
             <li><span class="flow__node"><svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg></span><div><b>A URL da sua oferta</b><small>Um único ponto de partida, em vez de uma página em branco.</small></div></li>
-            <li><span class="flow__node"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></span><div><b>Análise da oferta</b><small>A Ariexus lê a página e monta a análise antes de qualquer verba.</small></div></li>
-            <li><span class="flow__node"><svg viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m3 13 9 5 9-5"/></svg></span><div><b>Palavras-chave, anúncios, criativos e estrutura</b><small>Tudo nasce da mesma análise e conversa entre si.</small></div></li>
+            <li><span class="flow__node"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></span><div><b>Análise da oferta</b><small>Produto, público, promessa e provas, separando o que está na página do que é sugestão.</small></div></li>
+            <li><span class="flow__node"><svg viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m3 13 9 5 9-5"/></svg></span><div><b>Palavras-chave, anúncios e estrutura</b><small>Tudo nasce da mesma análise e conversa entre si. Criativos em imagem: <span class="soon">Em breve</span></small></div></li>
             <li><span class="flow__node"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="5" rx="1"/><rect x="3" y="16" width="6" height="5" rx="1"/><rect x="15" y="16" width="6" height="5" rx="1"/><path d="M12 8v4M6 16v-2h12v2"/></svg></span><div><b>Google Ads e Meta Ads</b><small>Cada canal recebe uma estrutura com lógica própria.</small></div></li>
-            <li><span class="flow__node"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div><b>Métricas e próximo passo</b><small>Otimizar ou escalar, com critério. E a próxima oferta começa do mesmo fluxo.</small></div></li>
+            <li><span class="flow__node"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div><b>Métricas e próximo passo <span class="soon">Em breve</span></b><small>Otimizar ou escalar, com critério. E a próxima oferta começa do mesmo fluxo.</small></div></li>
           </ol>
         </article>
       </div>
@@ -1320,7 +1329,7 @@ e estrutura para Google Ads e Meta Ads. Você revisa e decide o que publicar.</p
         <div class="how__col">
         <span class="how__rail" aria-hidden="true"><span></span></span>
         <ol class="how__steps">
-          <li class="step is-active">
+          <li class="step is-active" tabindex="0">
             <div class="step__body">
               <span class="step__marker" aria-hidden="true">1</span>
               <p class="step__label">Passo 01</p>
@@ -1329,7 +1338,7 @@ e estrutura para Google Ads e Meta Ads. Você revisa e decide o que publicar.</p
               <div class="step__shot"></div>
             </div>
           </li>
-          <li class="step">
+          <li class="step" tabindex="0">
             <div class="step__body">
               <span class="step__marker" aria-hidden="true">2</span>
               <p class="step__label">Passo 02</p>
@@ -1338,7 +1347,7 @@ e estrutura para Google Ads e Meta Ads. Você revisa e decide o que publicar.</p
               <div class="step__shot"></div>
             </div>
           </li>
-          <li class="step">
+          <li class="step" tabindex="0">
             <div class="step__body">
               <span class="step__marker" aria-hidden="true">3</span>
               <p class="step__label">Passo 03</p>
@@ -1491,8 +1500,8 @@ e estrutura para Google Ads e Meta Ads. Você revisa e decide o que publicar.</p
       </div>
 
       <div class="cta-line" data-reveal data-hide-cta>
-        <a class="btn btn--dark btn--lg" href="#planos">Analisar minha oferta<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        <p class="micro">Você revisa antes de publicar<span class="dotsep">•</span>Pix ou cartão</p>
+        <a class="btn btn--dark btn--lg" href="mailto:contato.ariexus@gmail.com?subject=Pedido%20de%20acesso%20ao%20beta%20da%20Ariexus">Pedir acesso ao beta<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <p class="micro">Beta fechado<span class="dotsep">•</span>Você revisa antes de publicar</p>
       </div>
     </div>
   </section>
@@ -1641,11 +1650,11 @@ e estrutura para Google Ads e Meta Ads. Você revisa e decide o que publicar.</p
       <div class="bgrid" data-stagger>
         <article class="bcard"><span class="bicon"><svg class="draw" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg></span><h3>Ponto de partida claro</h3><p>Comece cada oferta com uma visão clara, em vez de uma página em branco.</p></article>
         <article class="bcard"><span class="bicon"><svg class="draw" viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m3 13 9 5 9-5"/></svg></span><h3>Peças que conversam</h3><p>Palavras-chave e anúncios nascem da mesma análise.</p></article>
-        <article class="bcard"><span class="bicon"><svg class="draw" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></svg></span><h3>Criativos sem editor</h3><p>Criativos de imagem para testar, sem abrir um editor.</p></article>
+        <article class="bcard"><span class="bicon"><svg class="draw" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></svg></span><h3>Criativos sem editor <span class="soon">Em breve</span></h3><p>Criativos de imagem para testar, sem abrir um editor.</p></article>
         <article class="bcard"><span class="bicon"><svg class="draw" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><h3>Vários idiomas</h3><p>Anúncios em vários idiomas, para testar mercados fora do Brasil.</p></article>
         <article class="bcard"><span class="bicon"><svg class="draw" viewBox="0 0 24 24"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Revisão de risco</h3><p>Corrija erros previsíveis antes de publicar. Nenhuma ferramenta garante aprovação, e a gente diz isso.</p></article>
         <article class="bcard"><span class="bicon"><svg class="draw" viewBox="0 0 24 24"><path d="M4 16a8 8 0 1 1 16 0"/><path d="m12 16 4-5"/><path d="M4 20h16"/></svg></span><h3>Orçamento calculado</h3><p>Orçamento diário recomendado para a sua oferta, para você não chutar o número.</p></article>
-        <article class="bcard"><span class="bicon"><svg class="draw" viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M6 16v-5M11 16V7M16 16v-3M21 16V5"/></svg></span><h3>Métricas com direção</h3><p>Leitura métrica a métrica, com o próximo passo claro: otimizar ou escalar.</p></article>
+        <article class="bcard"><span class="bicon"><svg class="draw" viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M6 16v-5M11 16V7M16 16v-3M21 16V5"/></svg></span><h3>Métricas com direção <span class="soon">Em breve</span></h3><p>Leitura métrica a métrica, com o próximo passo claro: otimizar ou escalar.</p></article>
         <article class="bcard"><span class="bicon"><svg class="draw" viewBox="0 0 24 24"><circle cx="10" cy="8" r="4"/><path d="M3 20a7 7 0 0 1 11-5.7"/><path d="m15 18 2 2 4-4"/></svg></span><h3>Você no comando</h3><p>Nada vai ao ar sem a sua revisão.</p></article>
       </div>
 
@@ -1828,7 +1837,7 @@ e estrutura para Google Ads e Meta Ads. Você revisa e decide o que publicar.</p
       <header class="sec-head sec-head--center">
         <p class="kicker" data-reveal>Planos</p>
         <h2 class="h2" id="plans-title" data-reveal style="--d:.08s">Escolha a capacidade <span class="curtain"><span>do seu momento.</span></span></h2>
-        <p class="lead" data-reveal style="--d:.16s">Comece por uma oferta e amplie quando fizer sentido. Pagamento por Pix ou cartão.</p>
+        <p class="lead" data-reveal style="--d:.16s">Comece por uma oferta e amplie quando fizer sentido. Preços de lançamento, em breve.</p>
       </header>
 
       <div class="plans" data-stagger style="--d:.1s">
@@ -1836,10 +1845,10 @@ e estrutura para Google Ads e Meta Ads. Você revisa e decide o que publicar.</p
           <div class="plan__top"><h3 class="plan__name">Starter</h3></div>
           <p class="plan__for">Para validar ofertas e preparar campanhas com mais clareza.</p>
           <p class="plan__price"><span class="cur">R$</span><strong>67</strong><span class="per">/mês</span></p>
-          <a class="btn btn--dark btn--lg btn--block" href="#planos" data-plan="starter">Escolher Starter</a>
+          <a class="btn btn--dark btn--lg btn--block" href="mailto:contato.ariexus@gmail.com?subject=Pedido%20de%20acesso%20ao%20beta%20da%20Ariexus%20-%20plano%20Starter" data-plan="starter">Pedir acesso</a>
           <ul>
             <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>5 análises de ofertas por mês</li>
-            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>10 criativos em imagem por mês</li>
+            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg><span>10 criativos em imagem por mês <span class="soon">Em breve</span></span></li>
             <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Gerador de anúncios em vários idiomas</li>
             <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Gerador de palavras-chave</li>
             <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Suporte por e-mail</li>
@@ -1849,37 +1858,35 @@ e estrutura para Google Ads e Meta Ads. Você revisa e decide o que publicar.</p
           <div class="plan__top"><h3 class="plan__name">Pro</h3><span class="plan__badge">Recomendado</span></div>
           <p class="plan__for">Para executar campanhas e transformar novas ideias em planos de ação.</p>
           <p class="plan__price"><span class="cur">R$</span><strong>97</strong><span class="per">/mês</span></p>
-          <a class="btn btn--light btn--lg btn--block" href="#planos" data-plan="pro">Escolher Pro</a>
+          <a class="btn btn--light btn--lg btn--block" href="mailto:contato.ariexus@gmail.com?subject=Pedido%20de%20acesso%20ao%20beta%20da%20Ariexus%20-%20plano%20Pro" data-plan="pro">Pedir acesso</a>
           <ul>
             <li class="all"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Tudo do Starter</li>
             <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>12 análises por mês</li>
-            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>40 criativos por mês</li>
-            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Gerador de presell</li>
-            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Análise de métricas Pro</li>
-            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>5 ideias e 5 playbooks de Apps/SaaS por mês</li>
+            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg><span>40 criativos por mês <span class="soon">Em breve</span></span></li>
+            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg><span>Gerador de presell <span class="soon">Em breve</span></span></li>
+            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg><span>Análise de métricas Pro <span class="soon">Em breve</span></span></li>
+            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg><span>5 ideias e 5 playbooks de Apps/SaaS por mês <span class="soon">Em breve</span></span></li>
             <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Suporte prioritário</li>
-            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Premiações semestrais</li>
           </ul>
         </article>
         <article class="plan">
           <div class="plan__top"><h3 class="plan__name">Scale</h3></div>
           <p class="plan__for">Para operar com mais volume em campanhas e produtos digitais.</p>
           <p class="plan__price"><span class="cur">R$</span><strong>147</strong><span class="per">/mês</span></p>
-          <a class="btn btn--dark btn--lg btn--block" href="#planos" data-plan="scale">Escolher Scale</a>
+          <a class="btn btn--dark btn--lg btn--block" href="mailto:contato.ariexus@gmail.com?subject=Pedido%20de%20acesso%20ao%20beta%20da%20Ariexus%20-%20plano%20Scale" data-plan="scale">Pedir acesso</a>
           <ul>
             <li class="all"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Tudo do Pro</li>
             <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>20 análises por mês</li>
-            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>120 criativos por mês</li>
-            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Análise de métricas ilimitada</li>
+            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg><span>120 criativos por mês <span class="soon">Em breve</span></span></li>
+            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg><span>Análise de métricas ilimitada <span class="soon">Em breve</span></span></li>
             <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Gerador de palavras-chave avançado</li>
-            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>12 ideias e 12 playbooks por mês</li>
-            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg>Premiações semestrais exclusivas</li>
+            <li><svg viewBox="0 0 24 24"><use href="#i-check"/></svg><span>12 ideias e 12 playbooks por mês <span class="soon">Em breve</span></span></li>
           </ul>
         </article>
       </div>
 
       <div class="plans__foot" data-reveal>
-        <p class="plans__pay"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 10h18M7 15h3"/></svg>Pix ou cartão</p>
+        <p class="plans__pay"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 10h18M7 15h3"/></svg>Beta fechado, sem cobrança por enquanto</p>
         <p class="plans__anchor">Uma campanha mal estruturada custa verba. Uma assinatura custa a partir de <b>R$ 67 por mês</b>. Teste a oferta antes de escalar o investimento.</p>
       </div>
     </div>
@@ -1910,7 +1917,7 @@ e estrutura para Google Ads e Meta Ads. Você revisa e decide o que publicar.</p
             </details>
             <details class="acc">
               <summary><span>Mas será que serve para a minha oferta?</span><i class="acc__sign" aria-hidden="true"></i></summary>
-              <div class="acc__body"><div><p>Você informa plataforma de vendas, país e idioma, e a análise parte da sua página. Funciona para produto digital, serviço, app ou SaaS.</p></div></div>
+              <div class="acc__body"><div><p>Você informa plataforma de vendas, país e idioma, e a análise parte da sua página. Se ela tiver pouca informação, a Ariexus avisa o que faltou em vez de inventar.</p></div></div>
             </details>
             <details class="acc">
               <summary><span>Mas vale o investimento?</span><i class="acc__sign" aria-hidden="true"></i></summary>
@@ -1976,7 +1983,7 @@ e estrutura para Google Ads e Meta Ads. Você revisa e decide o que publicar.</p
         </details>
         <details class="acc">
           <summary><span>Como funcionam pagamento e suporte?</span><i class="acc__sign" aria-hidden="true"></i></summary>
-          <div class="acc__body"><div><p>O pagamento é por Pix ou cartão. O suporte é por e-mail, e prioritário nos planos Pro e Scale.</p></div></div>
+          <div class="acc__body"><div><p>Durante o beta fechado, o acesso é por convite e sem cobrança. O suporte é por e-mail, em contato.ariexus@gmail.com.</p></div></div>
         </details>
       </div>
     </div>
@@ -1996,8 +2003,8 @@ e estrutura para Google Ads e Meta Ads. Você revisa e decide o que publicar.</p
       <h2 id="final-title" data-reveal style="--d:.08s">Sua próxima oferta merece uma campanha pensada.</h2>
       <p class="final__sub" data-reveal style="--d:.16s">Cole a URL, revise o material e decida o que publicar.</p>
       <div data-reveal style="--d:.24s">
-        <div class="magnet-zone"><a class="btn btn--dark magnet" href="#planos">Analisar minha oferta<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
-        <p class="micro">Pix ou cartão<span class="dotsep">•</span>Você revisa antes de publicar</p>
+        <div class="magnet-zone"><a class="btn btn--dark magnet" href="mailto:contato.ariexus@gmail.com?subject=Pedido%20de%20acesso%20ao%20beta%20da%20Ariexus">Pedir acesso ao beta<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        <p class="micro">Beta fechado<span class="dotsep">•</span>Você revisa antes de publicar</p>
       </div>
     </div>
   </div>
@@ -2017,9 +2024,9 @@ e estrutura para Google Ads e Meta Ads. Você revisa e decide o que publicar.</p
     <div class="foot__bottom">
       <p>© 2026 Ariexus. Todos os direitos reservados.</p>
       <nav aria-label="Legal">
-        <a class="ulink" href="#">Termos de Uso</a>
-        <a class="ulink" href="#">Privacidade</a>
-        <a class="ulink" href="#">Contato</a>
+        <a class="ulink" href="/termos">Termos de Uso</a>
+        <a class="ulink" href="/privacidade">Privacidade</a>
+        <a class="ulink" href="/contato">Contato</a>
       </nav>
     </div>
   </footer>
@@ -2029,7 +2036,7 @@ e estrutura para Google Ads e Meta Ads. Você revisa e decide o que publicar.</p
 
 <!-- CTA fixo (mobile, depois da dobra) -->
 <div class="mcta">
-  <a class="btn btn--dark" href="#planos">Analisar minha oferta<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  <a class="btn btn--dark" href="mailto:contato.ariexus@gmail.com?subject=Pedido%20de%20acesso%20ao%20beta%20da%20Ariexus">Pedir acesso ao beta<svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></a>
 </div>
 
 <script>
@@ -2194,6 +2201,19 @@ e estrutura para Google Ads e Meta Ads. Você revisa e decide o que publicar.</p
     if (stageWin && stageWin.__seen) play(screens[i]);
   }
 
+  /* clicar (ou Enter/Espaço) num passo troca a tela do centro; só vale quando a tela está visível */
+  var activeStep = 0;
+  steps.forEach(function(step, i){
+    function pick(){
+      if (!stageWin || getComputedStyle(stageWin).display === 'none') return;
+      activeStep = i; activate(i);
+    }
+    step.addEventListener('click', pick);
+    step.addEventListener('keydown', function(ev){
+      if (ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); pick(); }
+    });
+  });
+
   /* ─────────── Abertura: palavra por palavra ─────────── */
   var stEl = $('.statement__big'), markEl = stEl ? $('mark', stEl) : null, words = [];
   if (stEl && !reduce){
@@ -2279,7 +2299,7 @@ e estrutura para Google Ads e Meta Ads. Você revisa e decide o que publicar.</p
 
   /* ─────────── Rolagem: nav, progresso, parallax, trilho, abertura, CTA fixo ─────────── */
   var bar = $('.progress span'), rail = $('.how__rail span'), stepsList = $('.how__steps'), mcta = $('.mcta');
-  var hideCta = false, ticking = false, activeStep = 0;
+  var hideCta = false, ticking = false;
 
   function update(){
     ticking = false;
