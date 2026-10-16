@@ -4,7 +4,7 @@ export const EMPRESA = {
   nome: "Ariexus",
   responsavel: "", // razão social ou nome do responsável
   documento: "", // CNPJ ou CPF
-  email: "", // e-mail de contato e de privacidade (LGPD)
+  email: "contato.ariexus@gmail.com", // e-mail de contato e de privacidade (LGPD)
   atualizadoEm: "15 de outubro de 2026",
 };
 
